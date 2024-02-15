@@ -1,0 +1,12 @@
+FROM node:21-alpine AS base
+COPY . /app
+WORKDIR /app
+
+FROM base AS build
+RUN yarn install --frozen-lockfile
+RUN yarn run build
+
+FROM base
+COPY --from=build /app/.output /app/.output
+EXPOSE 3000
+CMD [ "node", ".output/server/index.mjs" ]
