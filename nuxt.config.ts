@@ -8,6 +8,9 @@ export default defineNuxtConfig({
         Allow: '/',
       },
     ],
+    '@nuxtjs/sitemap',
+    'nuxt-link-checker',
+    'nuxt-schema-org',
   ],
   devtools: {
     enabled: true,
@@ -45,5 +48,12 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/robots.txt'],
     },
+  },
+  site: {
+    url: 'https://czydudajestprezydentem.zakhil.dev',
+    name: 'Czy Duda jest prezydentem?',
+  },
+  sitemap: {
+    cacheMaxAgeSeconds: 3600,
   },
 });
