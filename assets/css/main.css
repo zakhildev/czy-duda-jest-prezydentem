@@ -7,13 +7,14 @@
   --bg-light: #fffcf2;
   --text-dark: #f4f3ee;
   --text-light: #353535;
+  --link-blue: #3a86ff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -31,6 +32,6 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--bg-dark);
-    color: var(--text-dark)
+    color: var(--text-dark);
   }
 }
